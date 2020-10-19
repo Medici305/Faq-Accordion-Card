@@ -1,0 +1,24 @@
+@mixin background ($file) {
+    background-image: url(#{$file});
+    -webkit-background-image: url(#{$file});
+    -moz-background-image: url(#{$file});
+    -o-background-image: url(#{$file});
+    background-repeat: no-repeat;
+    background-position: -520px -300px;
+}
+
+@mixin dimensions($height, $width) {
+    width: $width;
+    height: $height;
+}
+
+.effect8:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}

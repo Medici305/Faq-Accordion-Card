@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+@import 'helper/mixins';
+@import 'helper/variables';
+@import 'helper/placeholders';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: {
+        family: Kumbh Sans;
+        size: 16px;
+        weight: 400;
+    }
+}
+
+.container {
+    background: $linear-gradient;
+    border: $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include dimensions(100vh, 100%);
+    &__main_box {
+
+        display: flex;
+        @include dimensions(70%, 75%);
+        background: $white;
+        border-radius: 10px;
+        @extend %box-shadow;
+        & ::after, ::before {
+            @extend %box-shadow-after-before;
+        }
+        &::after {
+            @extend %box-shadow-after;
+        }
+        
+        &__left_side {
+            width: 45%;
+            @include background('/resources/images/bg-pattern-desktop.svg');
+            //overflow: hidden;
+            &__female_image{
+                transform: translate(-22px, 60px);
+            }
+            &__box_image {
+                transform: translate(-80px, -190px);
+                overflow: visible;
+            }
+        }
+        &__right_side {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            > * {
+                padding: 20px 50px;
+            }
+            &__title {
+                font-size: 1.5rem;
+            }
+            &__questions {
+                &__question {
+                    display: inline;
+                }
+                & img {
+                    float: right;
+                }
+                & hr {
+                    margin: 20px 0px;
+                }
+
+            }
+        }
+    }
+}
+
+

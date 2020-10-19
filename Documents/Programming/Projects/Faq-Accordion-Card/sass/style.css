@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+.effect8:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+
+.container__main_box {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.container__main_box ::after, .container__main_box ::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px/10px;
+  border-radius: 100px/10px;
+}
+
+.container__main_box::after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Kumbh Sans;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  background: linear-gradient(to bottom, #af67e9 0%, #6565e7 100%);
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.container__main_box {
+  display: flex;
+  width: 75%;
+  height: 70%;
+  background: #fff;
+  border-radius: 10px;
+}
+.container__main_box__left_side {
+  width: 45%;
+  background-image: url(/resources/images/bg-pattern-desktop.svg);
+  -webkit-background-image: url(/resources/images/bg-pattern-desktop.svg);
+  -moz-background-image: url(/resources/images/bg-pattern-desktop.svg);
+  -o-background-image: url(/resources/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -520px -300px;
+}
+.container__main_box__left_side__female_image {
+  transform: translate(-22px, 60px);
+}
+.container__main_box__left_side__box_image {
+  transform: translate(-80px, -190px);
+  overflow: visible;
+}
+.container__main_box__right_side {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container__main_box__right_side > * {
+  padding: 20px 50px;
+}
+.container__main_box__right_side__title {
+  font-size: 1.5rem;
+}
+.container__main_box__right_side__questions__question {
+  display: inline;
+}
+.container__main_box__right_side__questions img {
+  float: right;
+}
+.container__main_box__right_side__questions hr {
+  margin: 20px 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
