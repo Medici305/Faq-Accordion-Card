@@ -1,0 +1,22 @@
+@mixin background ($file, $position) {
+    background-image: url(#{$file});
+    -webkit-background-image: url(#{$file});
+    -moz-background-image: url(#{$file});
+    -o-background-image: url(#{$file});
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+
+@mixin dimensions($height, $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin border($border) {
+    border: 4px solid $border;
+}
+
+@mixin center($align, $justify) {
+    align-self: $align;
+    justify-self: $justify;
+}
