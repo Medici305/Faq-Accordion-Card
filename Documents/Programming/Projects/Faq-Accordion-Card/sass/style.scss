@@ -19,7 +19,6 @@ html {
 
 .container {
     background: $linear-gradient;
-    border: $border;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,25 +28,20 @@ html {
         display: flex;
         @include dimensions(70%, 75%);
         background: $white;
-        border-radius: 10px;
+        border-radius: 30px;
         @extend %box-shadow;
-        & ::after, ::before {
-            @extend %box-shadow-after-before;
-        }
-        &::after {
-            @extend %box-shadow-after;
-        }
         
         &__left_side {
             width: 45%;
-            @include background('/resources/images/bg-pattern-desktop.svg');
-            //overflow: hidden;
+            @include background('/resources/images/bg-pattern-desktop.svg', -520px -300px);
             &__female_image{
                 transform: translate(-22px, 60px);
             }
+            &__female_image_mobile {
+                display: none;
+            }
             &__box_image {
                 transform: translate(-80px, -190px);
-                overflow: visible;
             }
         }
         &__right_side {
@@ -55,8 +49,12 @@ html {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: {
+                left: 50px;
+                right: 100px;
+            }
             > * {
-                padding: 20px 50px;
+                padding: 20px 0px;
             }
             &__title {
                 font-size: 1.5rem;
@@ -65,8 +63,13 @@ html {
                 &__question {
                     display: inline;
                 }
-                & img {
+                &__arrow {
                     float: right;
+                    cursor: pointer;
+                }
+                &__answer {
+                    margin-top: 10px;
+                    display: none;
                 }
                 & hr {
                     margin: 20px 0px;
@@ -77,4 +80,83 @@ html {
     }
 }
 
+.rotate {
+    transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
 
+.bold {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 376px) {
+    .container {
+        @include dimensions(100vh, 100%);
+        &__main_box {
+    
+            display: grid;
+            grid: 15% 85% / 1fr;
+            align-self: center;
+            transform: translateY(30px);
+            @include dimensions(70%, 85%);
+            border: $border;
+        
+            &__left_side {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                @include background('/resources/images/bg-pattern-mobile.svg', 30px -10px);
+                &__female_image{
+                    display: none;
+                }
+                &__female_image_mobile {
+                    display: block;
+                    transform: translate(5px, -110px);
+                }
+                &__box_image {
+                    display: none;
+                }
+            }
+            &__right_side {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px 15px;
+                
+                &__title {
+                    font-size: 1.3rem;
+                    text-align: center;
+                    height: 15%;
+                }
+                &__questions {
+                    height: 85%;
+
+                    
+                    > * {
+                        font-size: 14px;
+                    }
+                    &__question {
+                        display: inline;
+                        color: hsl(237, 12%, 33%);
+                    }
+                    &__arrow {
+                        justify-self: flex-end;
+                        cursor: pointer;
+    
+                    }
+                    &__answer {
+                        margin-top: 10px;
+                        display: none;
+                        color: hsl(240, 6%, 50%);
+                    }
+                    & hr {
+                        margin: 20px 0px;
+                    }
+    
+                }
+            }
+        }
+    }
+}
