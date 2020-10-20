@@ -51,7 +51,6 @@ $(document).ready(() => {
 
 });
 
-//Learn how to make individual text bold with each arrow clicked.
 //<p class="container__main_box__right_side__questions__answer two"></p>      
 
 /*      
