@@ -51,7 +51,7 @@ $(document).ready(() => {
 
 });
 
-//<p class="container__main_box__right_side__questions__answer two"></p>      
+ //<p class="container__main_box__right_side__questions__answer two"></p>      
 
 /*      
 const answer = document.querySelector('.container__main_box__right_side__questions__answer');
