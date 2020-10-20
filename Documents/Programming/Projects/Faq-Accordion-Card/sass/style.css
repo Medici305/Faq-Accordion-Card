@@ -98,7 +98,6 @@ html {
     transform: translateY(30px);
     width: 85%;
     height: 70%;
-    border: 5px solid black;
   }
   .container__main_box__left_side {
     grid-row: 1/2;

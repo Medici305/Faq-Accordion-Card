@@ -99,7 +99,6 @@ html {
             align-self: center;
             transform: translateY(30px);
             @include dimensions(70%, 85%);
-            border: $border;
         
             &__left_side {
                 grid-row: 1 / 2;
