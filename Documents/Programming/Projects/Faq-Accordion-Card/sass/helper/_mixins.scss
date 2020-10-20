@@ -11,3 +11,12 @@
     width: $width;
     height: $height;
 }
+
+@mixin border($border) {
+    border: 4px solid $border;
+}
+
+@mixin center($align, $justify) {
+    align-self: $align;
+    justify-self: $justify;
+}
